@@ -1,0 +1,24 @@
+\documentclass{minimal}
+
+\usepackage{circuitikz}
+
+\begin{document}
+	\begin{circuitikz}
+		% Beginning to resistor
+		\draw (0,0)
+			to [R=$R$] (2,0)
+			to [led, l=LED2] (4,0)
+			to (5,0) node[ground]{};
+		% LEDs In Parallel
+		\draw (2,0)
+			to (2,2) 
+			to [led, l=LED1] (4,2)
+			to (4,2)
+			to (4,0);
+		\draw (2,0)
+			to (2,-2)
+			to [led, l=LED3] (4,-2)
+			to (4,-2)
+			to (4,0);
+	\end{circuitikz}
+\end{document}
